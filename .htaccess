@@ -1,0 +1,271 @@
+RewriteEngine on
+Options -Indexes
+
+RewriteRule ^uk/$ index.php?lang=uk
+RewriteRule ^pl/$ index.php?lang=pl
+
+RewriteRule ^uk$ index.php?lang=uk
+RewriteRule ^pl$ index.php?lang=pl
+
+
+
+RewriteRule ^about$ index.php?go=/about&lang=uk
+RewriteRule ^about-([a-zA-Z-_0-9]+)$ index.php?go=/about&id=$1&lang=uk
+RewriteRule ^about-projects:([a-zA-Z-_0-9]+)$ index.php?go=/about/&id=projects&one=$1&lang=uk
+RewriteRule ^department/([a-zA-Z-_0-9]+)$ index.php?go=/department&id=$1&lang=uk
+RewriteRule ^news$ https://%{HTTP_HOST}/news_events/  [L,R=301]
+RewriteRule ^news_events/$ index.php?go=/news/inc&cat=news_events&lang=uk
+RewriteRule ^news/$ index.php?go=/news/inc&cat=news&lang=uk
+RewriteRule ^events/$ index.php?go=/news/inc&cat=events&lang=uk
+RewriteRule ^news_events/([a-zA-Z-_0-9]+)$ index.php?go=/news/inc&cat=news_events&department=$1&lang=uk
+RewriteRule ^news/([a-zA-Z-_0-9]+)$ index.php?go=/news/inc&cat=news&department=$1&lang=uk
+RewriteRule ^news/([a-zA-Z-_0-9]+)/page:([a-zA-Z-_0-9]+)/$ index.php?go=/news/inc&cat=news&department=$1&page=$2&lang=uk
+RewriteRule ^events/([a-zA-Z-_0-9]+)$ index.php?go=/news/inc&cat=events&department=$1&lang=uk
+RewriteRule ^news_events/page:([a-zA-Z-_0-9]+)/$ index.php?go=/news/inc&cat=news_events&page=$1&lang=uk
+RewriteRule ^news/page:([a-zA-Z-_0-9]+)/$ index.php?go=/news/inc&cat=news&page=$1&lang=uk
+RewriteRule ^events/page:([a-zA-Z-_0-9]+)/$ index.php?go=/news/inc&cat=events&page=$1&lang=uk
+RewriteRule ^news_events/([a-zA-Z-_0-9]+)/page:([a-zA-Z-_0-9]+)/$ index.php?go=/news/inc&cat=news_events&department=$1&page=$2&lang=uk
+RewriteRule ^news/page:([a-zA-Z-_0-9]+)/([a-zA-Z-_0-9]+)/$ index.php?go=/news/inc&cat=news&department=$1&page=$2&lang=uk
+RewriteRule ^events/([a-zA-Z-_0-9]+)/page:([a-zA-Z-_0-9]+)/$ index.php?go=/news/inc&cat=events&department=$1&page=$2&lang=uk
+RewriteRule ^events:([a-zA-Z-_0-9]+)$ https://%{HTTP_HOST}/news:$1 [L,R=301]
+RewriteRule ^news:([a-zA-Z-_0-9]+)$ index.php?go=/news/one&id=$1&lang=uk
+RewriteRule ^plan_a_visit$ index.php?go=/info/plan_a_visit&lang=uk
+RewriteRule ^exposition_exhibitions/$ index.php?go=/exposition/inc&cat=exposition_exhibitions&lang=uk
+RewriteRule ^exhibitions/$ index.php?go=/exposition/inc&cat=exhibitions&lang=uk
+RewriteRule ^exposition/$ index.php?go=/exposition/inc&cat=exposition&lang=uk
+RewriteRule ^exposition_exhibitions/([a-zA-Z-_0-9]+)$ index.php?go=/exposition/inc&cat=exposition_exhibitions&department=$1&lang=uk
+RewriteRule ^exhibitions/([a-zA-Z-_0-9]+)$ index.php?go=/exposition/inc&cat=exhibitions&department=$1&lang=uk
+RewriteRule ^exposition/([a-zA-Z-_0-9]+)$ index.php?go=/exposition/inc&cat=exposition&department=$1&lang=uk
+RewriteRule ^exposition:([a-zA-Z-_0-9]+)$ index.php?go=/exposition/one&id=$1&lang=uk
+RewriteRule ^collections/$ index.php?go=/collections/inc&lang=uk
+RewriteRule ^collections/([a-zA-Z-_0-9]+)$ index.php?go=/collections/inc&department=$1&lang=uk
+RewriteRule ^collections:([a-zA-Z-_0-9]+)$ index.php?go=/collections/one&id=$1&lang=uk
+RewriteRule ^online_museum$ index.php?go=/online_museum/inc&lang=uk
+RewriteRule ^online_museum/([a-zA-Z-_0-9]+)$ index.php?go=/online_museum/inc&cat=$1&lang=uk
+RewriteRule ^online_museum:([a-zA-Z-_0-9]+)$ index.php?go=/online_museum/one&id=$1&lang=uk
+RewriteRule ^scientific_work$ index.php?go=/scientific_work/inc&lang=uk
+RewriteRule ^scientific_work/([a-zA-Z-_0-9]+)$ index.php?go=/scientific_work/inc&cat=$1&lang=uk
+RewriteRule ^scientific_work/([a-zA-Z-_0-9]+)/$ index.php?go=/scientific_work/inc&cat=$1&lang=uk
+RewriteRule ^scientific_work/([a-zA-Z-_0-9]+)/page:([0-9]+)/$ index.php?go=/scientific_work/inc&cat=$1&page=$2&lang=uk
+RewriteRule ^scientific_work:([a-zA-Z-_0-9]+)$ index.php?go=/scientific_work/one&id=$1&lang=uk
+RewriteRule ^programs_excursions:([a-zA-Z-_0-9]+)$ index.php?go=/programs_excursions/one&id=$1&lang=uk
+RewriteRule ^programs_excursions$ index.php?go=/programs_excursions/inc&lang=uk
+RewriteRule ^programs_excursions/$ index.php?go=/programs_excursions/inc&lang=uk
+RewriteRule ^excursions/$ index.php?go=/programs_excursions/inc&cat=excursions&lang=uk
+RewriteRule ^programs/$ index.php?go=/programs_excursions/inc&cat=programs&lang=uk
+RewriteRule ^programs_excursions/([a-zA-Z-_0-9]+)$ index.php?go=/programs_excursions/inc&department=$1&lang=uk
+RewriteRule ^programs_excursions/([a-zA-Z-_0-9]+)/([a-zA-Z-_0-9]+)$ index.php?go=/programs_excursions/inc&department=$2&cat=$1
+RewriteRule ^excursions/([a-zA-Z-_0-9]+)$ index.php?go=/programs_excursions/inc&department=$1&cat=excursions&lang=uk
+RewriteRule ^programs/([a-zA-Z-_0-9]+)$ index.php?go=/programs_excursions/inc&department=$1&cat=programs&lang=uk
+RewriteRule ^search$ index.php?go=/search&lang=uk [L,QSA]
+################################################################################
+################################################################################
+################################################################################
+
+
+RewriteRule ^pl/about$ index.php?go=/about&lang=pl
+RewriteRule ^pl/about-([a-zA-Z-_0-9]+)$ index.php?go=/about&id=$1&lang=pl
+RewriteRule ^pl/about-projects:([a-zA-Z-_0-9]+)$ index.php?go=/about/&id=projects&one=$1&lang=pl
+RewriteRule ^pl/department/([a-zA-Z-_0-9]+)$ index.php?go=/department&id=$1&lang=pl
+RewriteRule ^pl/news$ https://%{HTTP_HOST}/news_events/  [L,R=301]
+RewriteRule ^pl/news_events/$ index.php?go=/news/inc&cat=news_events&lang=pl
+RewriteRule ^pl/news/$ index.php?go=/news/inc&cat=news&lang=pl
+RewriteRule ^pl/events/$ index.php?go=/news/inc&cat=events&lang=pl
+RewriteRule ^pl/news_events/([a-zA-Z-_0-9]+)$ index.php?go=/news/inc&cat=news_events&department=$1&lang=pl
+RewriteRule ^pl/news/([a-zA-Z-_0-9]+)$ index.php?go=/news/inc&cat=news&department=$1&lang=pl
+RewriteRule ^news/([a-zA-Z-_0-9]+)/page:([a-zA-Z-_0-9]+)/$ index.php?go=/news/inc&cat=news&department=$1&page=$2&lang=pl
+RewriteRule ^pl/events/([a-zA-Z-_0-9]+)$ index.php?go=/news/inc&cat=events&department=$1&lang=pl
+RewriteRule ^pl/news_events/page:([a-zA-Z-_0-9]+)/$ index.php?go=/news/inc&cat=news_events&page=$1&lang=pl
+RewriteRule ^pl/news/page:([a-zA-Z-_0-9]+)/$ index.php?go=/news/inc&cat=news&page=$1&lang=pl
+RewriteRule ^pl/events/page:([a-zA-Z-_0-9]+)/$ index.php?go=/news/inc&cat=events&page=$1&lang=pl
+RewriteRule ^pl/news_events/([a-zA-Z-_0-9]+)/page:([a-zA-Z-_0-9]+)/$ index.php?go=/news/inc&cat=news_events&department=$1&page=$2&lang=pl
+RewriteRule ^pl/news/page:([a-zA-Z-_0-9]+)/([a-zA-Z-_0-9]+)/$ index.php?go=/news/inc&cat=news&department=$1&page=$2&lang=pl
+RewriteRule ^pl/events/([a-zA-Z-_0-9]+)/page:([a-zA-Z-_0-9]+)/$ index.php?go=/news/inc&cat=events&department=$1&page=$2&lang=pl
+RewriteRule ^pl/events:([a-zA-Z-_0-9]+)$ https://%{HTTP_HOST}/news:$1 [L,R=301]
+RewriteRule ^pl/news:([a-zA-Z-_0-9]+)$ index.php?go=/news/one&id=$1&lang=pl
+RewriteRule ^pl/plan_a_visit$ index.php?go=/info/plan_a_visit&lang=pl
+RewriteRule ^pl/exposition_exhibitions/$ index.php?go=/exposition/inc&cat=exposition_exhibitions&lang=pl
+RewriteRule ^pl/exhibitions/$ index.php?go=/exposition/inc&cat=exhibitions&lang=pl
+RewriteRule ^pl/exposition/$ index.php?go=/exposition/inc&cat=exposition&lang=pl
+RewriteRule ^pl/exposition_exhibitions/([a-zA-Z-_0-9]+)$ index.php?go=/exposition/inc&cat=exposition_exhibitions&department=$1&lang=pl
+RewriteRule ^pl/exhibitions/([a-zA-Z-_0-9]+)$ index.php?go=/exposition/inc&cat=exhibitions&department=$1&lang=pl
+RewriteRule ^pl/exposition/([a-zA-Z-_0-9]+)$ index.php?go=/exposition/inc&cat=exposition&department=$1&lang=pl
+RewriteRule ^pl/exposition:([a-zA-Z-_0-9]+)$ index.php?go=/exposition/one&id=$1&lang=pl
+RewriteRule ^pl/collections/$ index.php?go=/collections/inc&lang=pl
+RewriteRule ^pl/collections/([a-zA-Z-_0-9]+)$ index.php?go=/collections/inc&department=$1&lang=pl
+RewriteRule ^pl/collections:([a-zA-Z-_0-9]+)$ index.php?go=/collections/one&id=$1&lang=pl
+RewriteRule ^pl/online_museum$ index.php?go=/online_museum/inc&lang=pl
+RewriteRule ^pl/online_museum/([a-zA-Z-_0-9]+)$ index.php?go=/online_museum/inc&cat=$1&lang=pl
+RewriteRule ^pl/online_museum:([a-zA-Z-_0-9]+)$ index.php?go=/online_museum/one&id=$1&lang=pl
+RewriteRule ^pl/scientific_work$ index.php?go=/scientific_work/inc&lang=pl
+RewriteRule ^pl/scientific_work/([a-zA-Z-_0-9]+)$ index.php?go=/scientific_work/inc&cat=$1&lang=pl
+RewriteRule ^pl/scientific_work/([a-zA-Z-_0-9]+)/$ index.php?go=/scientific_work/inc&cat=$1&lang=pl
+RewriteRule ^pl/scientific_work/([a-zA-Z-_0-9]+)/page:([0-9]+)/$ index.php?go=/scientific_work/inc&cat=$1&page=$2&lang=pl
+RewriteRule ^pl/scientific_work:([a-zA-Z-_0-9]+)$ index.php?go=/scientific_work/one&id=$1&lang=pl
+RewriteRule ^pl/programs_excursions:([a-zA-Z-_0-9]+)$ index.php?go=/programs_excursions/one&id=$1&lang=pl
+RewriteRule ^pl/programs_excursions$ index.php?go=/programs_excursions/inc&lang=pl
+RewriteRule ^pl/programs_excursions/$ index.php?go=/programs_excursions/inc&lang=pl
+RewriteRule ^pl/excursions/$ index.php?go=/programs_excursions/inc&cat=excursions&lang=pl
+RewriteRule ^pl/programs/$ index.php?go=/programs_excursions/inc&cat=programs&lang=pl
+RewriteRule ^pl/programs_excursions/([a-zA-Z-_0-9]+)$ index.php?go=/programs_excursions/inc&department=$1&lang=pl
+RewriteRule ^pl/programs_excursions/([a-zA-Z-_0-9]+)/([a-zA-Z-_0-9]+)$ index.php?go=/programs_excursions/inc&department=$2&cat=$1
+RewriteRule ^pl/excursions/([a-zA-Z-_0-9]+)$ index.php?go=/programs_excursions/inc&department=$1&cat=excursions&lang=pl
+RewriteRule ^pl/programs/([a-zA-Z-_0-9]+)$ index.php?go=/programs_excursions/inc&department=$1&cat=programs&lang=pl
+RewriteRule ^pl/search$ index.php?go=/search&lang=pl [L,QSA]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#RewriteRule ^search/find:$ index.php?go=/search&find=$1 [L,QSA]
+#RewriteRule ^search/([a-zA-Z-_0-9]+)/([a-zA-Z-_0-9]+)$ index.php?go=/search/&cat=$1&find=$2
+
+
+
+
+
+    AddDefaultCharset utf-8
+    AddCharset utf-8 *
+    <IfModule mod_charset.c>
+        CharsetSourceEnc utf-8
+        CharsetDefault utf-8
+    </IfModule>
+
+#RewriteCond %{THE_REQUEST} //
+#RewriteCond %{QUERY_STRING} !http(s|)://
+#RewriteRule .* /$0 [R=301,L]
+#
+#
+RewriteRule ^400$ index.php?go=/error&id=400
+RewriteRule ^401$ index.php?go=/error&id=401
+RewriteRule ^403$ index.php?go=/error&id=403
+RewriteRule ^404$ index.php?go=/error&id=404
+ErrorDocument  400  https://volynmuseum.com/400
+ErrorDocument  401  https://volynmuseum.com/401
+ErrorDocument  403  https://volynmuseum.com/403
+ErrorDocument  404  https://volynmuseum.com/404
+#
+#<IfModule mod_expires.c>
+#ExpiresActive On
+#ExpiresDefault "access 7 days"
+#ExpiresByType image/gif "access plus 1 year"
+#ExpiresByType image/jpeg "access plus 1 year"
+#ExpiresByType image/png "access plus 1 year"
+#ExpiresByType image/jpg "access plus 1 year"
+#ExpiresByType image/x-icon "access 1 year"
+#ExpiresByType application/x-shockwave-flash "access 1 year"
+#</IfModule>
+#<ifModule mod_headers.c>
+## 30 дней
+#<filesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|swff|js|css)$">
+#Header set Cache-Control "max-age=2592000, public"
+#</filesMatch>
+#</ifModule>
+#
+#
+#<ifModule mod_gzip.c>
+#  mod_gzip_on Yes
+#  mod_gzip_dechunk Yes
+#  mod_gzip_item_include file .(html?|txt|css|js|php|pl|jpg)$
+#  mod_gzip_item_include handler ^cgi-script$
+#  mod_gzip_item_include mime ^text/.*
+#  mod_gzip_item_include mime ^application/x-javascript.*
+#  mod_gzip_item_exclude mime ^image/.*
+#  mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+#</ifModule>
+#
+#AddOutputFilterByType DEFLATE text/plain
+#AddOutputFilterByType DEFLATE text/html
+#AddOutputFilterByType DEFLATE text/xml
+#AddOutputFilterByType DEFLATE text/css
+#AddOutputFilterByType DEFLATE application/xml
+#AddOutputFilterByType DEFLATE application/xhtml+xml
+#AddOutputFilterByType DEFLATE application/rss+xml
+#AddOutputFilterByType DEFLATE application/javascript
+#AddOutputFilterByType DEFLATE application/x-javascript
+#
+#
+#
+#
+#
+#<ifModule mod_deflate.c>
+#  <IfModule mod_filter.c>
+#      AddOutputFilterByType DEFLATE text/plain text/html
+#      AddOutputFilterByType DEFLATE text/css
+#      AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
+#      AddOutputFilterByType DEFLATE text/xml application/xml application/xhtml+xml application/rss+xml
+#      AddOutputFilterByType DEFLATE application/json
+#      AddOutputFilterByType DEFLATE application/vnd.ms-fontobject application/x-font-ttf font/opentype image/svg+xml image/x-icon  </ifModule>
+#      AddOutputFilterByType DEFLATE / x-font-ttf application / x-font-opentype image / svg + xml
+#   </ifModule>
+#</ifModule>
+#<IfModule mod_expires.c>
+#    ExpiresActive On
+#    ExpiresDefault "access plus 10 month"
+#    ExpiresByType image/gif                 "access plus 1 month"
+#    ExpiresByType image/png                 "access plus 1 month"
+#    ExpiresByType image/jpg                 "access plus 1 month"
+#    ExpiresByType image/jpeg                "access plus 1 month"
+#    ExpiresByType text/css                  "access plus 1 year"
+#    ExpiresByType application/javascript    "access plus 1 year"
+#    ExpiresByType text/javascript           "access plus 1 year"
+#AddType application/vnd.ms-fontobject .eot
+#AddType application/x-font-ttf .ttf
+#AddType application/x-font-opentype .otf
+#AddType application/x-font-woff .woff
+#AddType image/svg+xml .svg
+#ExpiresActive on
+#ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+#ExpiresByType application/x-font-ttf "access plus 1 year"
+#ExpiresByType application/x-font-opentype "access plus 1 year"
+#ExpiresByType application/x-font-woff "access plus 1 year"
+#ExpiresByType image/svg+xml "access plus 1 year"
+#</IfModule>
+#<IfModule mod_headers.c>
+#    Header unset ETag
+#</IfModule>
+#FileETag None
+#<IfModule mod_expires.c>
+#ExpiresActive On
+#ExpiresDefault "access plus 6 month"
+#ExpiresByType text/css "access plus 6 month"
+#ExpiresByType text/plain "access plus 6 month"
+#ExpiresByType image/gif "access plus 6 month"
+#ExpiresByType image/png "access plus 6 month"
+#ExpiresByType image/jpeg "access plus 6 month"
+#ExpiresByType application/x-javascript "access plus 6 month"
+#ExpiresByType application/javascript "access plus 6 month"
+#ExpiresByType application/x-icon "access plus 6 month"
+#</IfModule>
+#<FilesMatch ".(jpg|jpeg|png|ico|swf|js|css|pdf)$">
+#Header set Cache-Control "max-age=86400"
+#</FilesMatch>
+#AddType application/vnd.ms-fontobject .eot
+#AddType application/x-font-ttf .ttf
+#AddType application/x-font-opentype .otf
+#AddType application/x-font-woff .woff
+#AddType image/svg+xml .svg
+#ExpiresActive on
+#ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+#ExpiresByType application/x-font-ttf "access plus 1 year"
+#ExpiresByType application/x-font-opentype "access plus 1 year"
+#ExpiresByType application/x-font-woff "access plus 1 year"
+#ExpiresByType image/svg+xml "access plus 1 year"

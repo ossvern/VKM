@@ -1,0 +1,145 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html {line-height: 1.15;-webkit-text-size-adjust: 100%}
+body {margin: 0}
+main {display: block}
+h1 {font-size: 2em;margin: .67em 0}
+hr {box-sizing: content-box;height: 0;overflow: visible}
+pre {font-family: monospace, monospace;font-size: 1em}
+a {background-color: transparent}
+abbr[title] {border-bottom: none;text-decoration: underline;text-decoration: underline dotted}
+b, strong {font-weight: bolder}
+code, kbd, samp {font-family: monospace, monospace;font-size: 1em}
+small {font-size: 80%}
+sub, sup {font-size: 75%;line-height: 0;position: relative;vertical-align: baseline}
+sub {bottom: -.25em}
+sup {top: -.5em}
+img {border-style: none}
+button, input, optgroup, select, textarea {font-family: inherit;font-size: 100%;line-height: 1.15;margin: 0}
+button, input {overflow: visible}
+button, select {text-transform: none}
+[type=button], [type=reset], [type=submit], button {-webkit-appearance: button}
+[type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner, button::-moz-focus-inner {border-style: none;padding: 0}
+[type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring, button:-moz-focusring {outline: 1px dotted ButtonText}
+fieldset {padding: .35em .75em .625em}
+legend {box-sizing: border-box;color: inherit;display: table;max-width: 100%;padding: 0;white-space: normal}
+progress {vertical-align: baseline}
+textarea {overflow: auto}
+[type=checkbox], [type=radio] {box-sizing: border-box;padding: 0}
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {height: auto}
+[type=search] {-webkit-appearance: textfield;outline-offset: -2px}
+[type=search]::-webkit-search-decoration {-webkit-appearance: none}
+::-webkit-file-upload-button {-webkit-appearance: button;font: inherit}
+details {display: block}
+summary {display: list-item}
+[hidden], template {display: none}
+@font-face {
+  font-display: auto;
+  font-family: ProximaNova-Regular;
+  src: local("ProximaNova-Regular"), url(../fonts/ProximaNova-Regular.ttf) format("truetype")
+}
+/*!*font-display: auto;*!*/
+/*!*font-weight: 400;*!*/
+/*!*font-style: normal;*!*/
+@font-face {
+  font-family: ProximaNova-ExtraBold;
+  src: local("ProximaNova-ExtraBold"), url(../fonts/ProximaNova-ExtraBold.otf) format("truetype")
+}
+* {outline: none;padding: 0;margin: 0}
+body {font-family: ProximaNova-Regular;line-height: 1;background: #fff;overflow-y: initial;padding-bottom: 60px;font-size: 16px;color: #181a1c}
+body.js-stop_scroll {overflow: hidden;height: 100%}
+input::placeholder {color: #888;opacity: 1}
+input:-ms-input-placeholder {color: #888}
+input::-ms-input-placeholder {color: #888}
+::selection {background: #b70b0b;color: #fff}
+::-moz-selection {background: #b70b0b;color: #fff}
+::-webkit-scrollbar {width: 4px;height: 4px}
+::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb:hover {border-width: 1px 1px 1px 2px;border-color: #b70b0b;background-color: #b70b0b}
+::-webkit-scrollbar-track:hover {border-left: 1px solid #fff;background-color: #fff}
+::-webkit-scrollbar-track {border-width: 0}
+h1, h2, h3, h4 {color: #b70b0b;padding: 0;margin: 0;line-height: 1}
+a:link, a:visited {color: #131419;text-decoration: none;transition: all .1s ease}
+a:hover {color: #b70b0b}
+img {max-width: 100%}
+b {font-family: ProximaNova-ExtraBold}
+.container {max-width: 1640px}
+.container, .container-alt {margin-left: auto;margin-right: auto;padding: 0 20px}
+.container-alt {max-width: 1240px}
+.text-center {text-align: center}
+header {padding: 20px;background: #f8f8f8;margin-bottom: 20px}
+header .container {display: flex;align-items: center;justify-content: center}
+header .container img {width: 36px}
+header .container nav {display: flex;align-items: center;justify-content: flex-start;width: 100%;font-size: 14px}
+header .container nav a:link, header .container nav a:visited {padding: 10px}
+header .container nav a:link.-act, header .container nav a:link:hover, header .container nav a:visited.-act, header .container nav a:visited:hover {background: #b70b0b;color: #fff}
+header .container nav a:link.-act2, header .container nav a:visited.-act2 {background: #383838;color: #fff}
+main fieldset {border: none}
+main legend {font-size: 1.4em;margin-bottom: 10px}
+main label {display: block;margin-bottom: 2px}
+main input, main select, main textarea {background: #fff;border: 1px solid #c3c3c3;font-size: 1.2em;height: auto;outline: 0;padding: 10px;width: 100%;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;color: #4c4c4c;-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .03) inset;box-shadow: inset 0 1px 0 rgba(0, 0, 0, .03);margin: 2px 0 20px}
+main input:focus, main select:focus, main textarea:focus {background: #d2d9dd}
+main select {-webkit-appearance: menulist-button}
+main .number {background: #b70b0b;color: #fff;height: 22px;width: 20px;display: inline-block;font-size: .8em;margin-right: 4px;line-height: 30px;text-align: center;text-shadow: 0 1px 0 hsla(0, 0%, 100%, .2);border-radius: 15px 15px 15px 0}
+main input[type=button], main input[type=submit] {position: relative;display: block;padding: 10px 20px;color: #fff;background: #b70b0b;font-size: 18px;text-align: center;font-style: normal;width: 100%;border: solid #870808;border-width: 1px 1px 3px;margin: 0 auto 10px}
+main input[type=button]:hover, main input[type=submit]:hover {background: #870808}
+main input.-price {width: 90px;color: #000;text-align: center;font-size: 18px;margin: 0}
+main table {width: 100%}
+main table td, main table th {font-weight: unset;padding: 10px}
+main table tbody tr:nth-child(2n) {background-color: #f8f8f8}
+main table td {font-size: 14px;color: #2e3336;line-height: 1.4;text-align: center}
+main table th {font-size: 12px;color: #000;line-height: 1.4;text-transform: uppercase}
+main table tr:hover td {background-color: #dfdfdf;color: #000}
+main table td:hover {background-color: #f8f8f8;color: #000}
+main table td strong {font-size: 20px;font-weight: 400;display: block;padding-bottom: 5px}
+main table td.-link {width: 46px;text-align: center}
+main table td.-link img {width: 30px;height: 30px;opacity: .6}
+main table td.-link img:hover {opacity: 1}
+main table tr.-half td {width: 50%;text-align: left}
+main .alert {margin: 20px auto;max-width: 1640px;padding: 20px;background: #4e9327;color: #fff;text-align: center;font-size: 20px;display: flex;align-items: center;justify-content: center}
+main .alert a:link, main .alert a:visited {padding: 5px 10px;background: #f8f8f8;margin-left: 10px;font-size: 14px;font-weight: 700}
+main .alert a:link:hover, main .alert a:visited:hover {color: #fff;background: #383838}
+main input.-xl, main select.-xl, main textarea.-xl {height: auto;padding: 10px;color: #2e3336}
+.text-left {text-align: left}
+.text-right {text-align: right}
+.no-margin {margin: 0}
+.bl-user {display: flex;align-items: center;justify-content: flex-start;padding: 20px;max-width: 800px;margin: auto;border-bottom: 1px dashed grey;background: #f8f8f8}
+.bl-user img {border-radius: 50%}
+.row {display: flex;align-items: flex-start;justify-content: space-around;flex-wrap: wrap}
+.row .-col {width: 50%}
+.row2 {display: flex;align-items: flex-start;justify-content: space-around;flex-wrap: wrap}
+.row2 label {padding: 0 10px;flex: 3 3 calc(50% - 20px)}
+.hidden {display: none}
+input[type=checkbox] {-ms-transform: scale(1.5);-moz-transform: scale(1.5);-webkit-transform: scale(1.5);-o-transform: scale(1.5);transform: scale(1.5);margin: 5px 0 0;display: block}
+.pageProfile__history .row {display: flex;align-items: flex-start;justify-content: space-between;padding-bottom: 20px;margin-bottom: 20px;border-bottom: 1px solid #383838}
+.pageProfile__history .row .info {width: calc(50% - 20px)}
+.pageProfile__history .row .info table tr td {padding: 10px;text-align: left}
+.pageProfile__history .row .products {width: calc(50% - 20px);overflow-y: auto;max-height: 50vh}
+.pageProfile__history .row .products .item {display: flex;align-items: center;justify-content: space-between;margin-bottom: 10px;padding: 10px}
+.pageProfile__history .row .products .item img {width: 30%;max-width: 100px}
+.pageProfile__history .row .products .item strong {display: block;font-size: 16px;margin: 0 20px;flex: 6 0}
+.pageProfile__history .row .products .item label {display: flex;align-items: center;justify-content: center;font-size: 12px;margin: 0}
+.pageProfile__history .row .products .item label input[type=number] {width: 60px;margin: 0 20px;padding: 10px;text-align: center}
+.pageProfile__history .row .products .item p {flex: 6 0;padding-left: 20px}
+.pageProfile__history .row .products .item p i {display: block;font-weight: 400;font-style: normal;font-size: 18px;margin-bottom: 10px}
+.pageProfile__history .row .products .item:hover {background: #fff;-webkit-box-shadow: 0 2px 50px 0 rgba(34, 60, 80, .2);-moz-box-shadow: 0 2px 50px 0 rgba(34, 60, 80, .2);box-shadow: 0 2px 50px 0 rgba(34, 60, 80, .2)}
+.pageProfile__history .row .products .item:hover a.-remove:link, .pageProfile__history .row .products .item:hover a.-remove:visited {opacity: 1}
+.blockMenu {display: block;padding: 20px;border-top: 1px solid #c3c3c3;border-bottom: 1px solid #c3c3c3;text-align: center;margin-bottom: 20px}
+.blockMenu a:link, .blockMenu a:visited {padding: 10px;font-size: 22px}
+.blockMenu a:link.act, .blockMenu a:link:hover, .blockMenu a:visited.act, .blockMenu a:visited:hover {text-decoration: underline}
+.pageGallery {margin-top: 60px;display: flex;flex-wrap: wrap}
+.pageGallery div {width: calc(33% - 40px);padding: 20px;display: flex;align-items: center;flex-direction: column;text-align: center}
+.pageGallery div picture {height: 260px;width: auto;overflow: hidden;display: flex;align-items: center}
+.pageGallery div input {font-size: 12px;text-align: center}
+@media screen and (max-width: 768px) {
+  header {padding: 10px;background: rgba(245, 251, 252, .56);margin-bottom: 20px;width: calc(100% - 20px);overflow-x: auto}
+  header .container {padding: 0}
+  .container {padding: 10px}
+  fieldset {padding: 0 0 20px}
+  .row {display: flex;align-items: flex-start;justify-content: space-around;flex-wrap: wrap;flex-direction: column}
+  .row .-col {width: 100%}
+  form {overflow-x: auto}
+  .pageProfile__history .row {flex-direction: column}
+  .pageProfile__history .row .info, .pageProfile__history .row .products {width: inherit}
+  .pageGallery {margin-top: 60px;display: flex;flex-wrap: wrap}
+  .pageGallery div {width: calc(100% - 40px)}
+  .pageGallery div picture {height: 150px}
+}
